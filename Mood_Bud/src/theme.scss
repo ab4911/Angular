@@ -1,0 +1,36 @@
+@use '@angular/material' as mat;
+@import '@angular/material/theming';
+
+$resume-palette: (
+  50: #ffded2,
+  100: #fcbdb6,
+  200: #dd9994,
+  300: #be756f,
+  400: #a75955,
+  500: #903e3b,
+  600: #833535,
+  700: #72292c,
+  800: #621c25,
+  900: #500d1c,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: rgba(black, 0.87),
+    A200: rgba(black, 0.87),
+    A400: white,
+    A700: white,
+  ),
+);
+
+$my-theme-primary: mat.define-palette($resume-palette, 600, 300, 400, 900);
+$my-theme-accent: mat-palette($mat-amber);
+$my-theme-warn: mat-palette($mat-red);
+$my-theme: mat-light-theme($my-theme-primary, $my-theme-accent, $my-theme-warn);

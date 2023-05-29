@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@use 'sass:map';
+@use '@angular/material' as mat;
+@import 'theme.scss';
+
+@include mat-core();
+@include angular-material-theme($my-theme);
+$primary-palette: map.get($my-theme, 'primary');
+$light-shade: #473144; // mat.get-color-from-palette($primary-palette, 200);
+$dark-shade: white; //mat.get-color-from-palette($primary-palette, 600);
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-color: rgb(199, 193, 173, 0.2);
+}
